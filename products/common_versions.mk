@@ -7,7 +7,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID="GWK74 - Gigglebread"
 ifdef CYANOGEN_NIGHTLY
     CMVERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date +%Y%m%d)-NIGHTLY-$(CM_BUILD)
 else ifdef CYANOGEN_KANG
-    MODVERSION := CyanogenMod-$(PRODUCT_VERSION_MAJOR)$(PRODUCT_VERSION_MINOR)-$(shell date +%Y%m%d)-UNOFFICIAL-$(PRODUCT_RELEASE_NAME)
     CMVERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date +%Y%m%d)-UNOFFICIAL-$(CM_BUILD)
 else
     ifdef CYANOGEN_RELEASE
@@ -18,5 +17,4 @@ else
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=$(MODVERSION) \
-    ro.cm.version=$(CMVERSION)
+    ro.modversion=$(CMVERSION)
