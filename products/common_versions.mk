@@ -20,7 +20,7 @@ endif
 ifdef CM_BUILDTYPE
     ifdef CYANOGEN_EXTRAVERSION
         # Force build type to EXPERIMENTAL
-        # CM_BUILDTYPE := FORBIDDEN
+        CM_BUILDTYPE := FORBIDDEN
         # Add leading dash to CM_EXTRAVERSION
         CM_EXTRAVERSION := -$(CYANOGEN_EXTRAVERSION)
     endif
